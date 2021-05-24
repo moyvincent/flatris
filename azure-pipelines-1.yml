@@ -7,14 +7,12 @@ trigger:
 - master
 
 stages:
-- stage: stage1
-  pool:
-    vmImage: ubuntu-latest
-
 
 - stage: stage2
   jobs:
   - job: BuildTwo
+    pool:
+      vmImage: ubuntu-latest
     steps:
       - task: NodeTool@0
         inputs:
